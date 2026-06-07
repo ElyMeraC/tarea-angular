@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConversorMainActivity"
+    android:background="#01022e"
+    android:layout_marginTop="35dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="320dp"
+                android:layout_height="106dp"
+                android:layout_marginTop="4dp"
+                app:srcCompat="@drawable/dlaccessletra" />
+
+            <TextView
+                android:id="@+id/lblTituloConversor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conversor Multiuso"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/lblSubtituloLongitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.- Conversión de Longitud (Base: Metros)"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtLongitud"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/white"
+                android:hint="Ejemplo conversión longitud (Metros)"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#7F8C8D"
+                android:layout_marginTop="6dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgLongitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+                <RadioButton android:id="@+id/rbCm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CM" android:textColor="@color/white" android:layout_marginEnd="16dp" app:buttonTint="@android:color/white"/>
+                <RadioButton android:id="@+id/rbMetro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Metro" android:textColor="@color/white" android:layout_marginEnd="16dp" app:buttonTint="@android:color/white"/>
+                <RadioButton android:id="@+id/rbKm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KM" android:textColor="@color/white" app:buttonTint="@android:color/white"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lblResLongitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Long: ---"
+                android:textColor="#2ECC71"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/lblSubtituloTemperatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2.- Conversión de Temperatura (Base: Celsius)"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/txtTemperatura"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/white"
+                android:hint="Ejemplo conversión temperatura (Celsius)"
+                android:inputType="numberDecimal|numberSigned"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#7F8C8D"
+                android:layout_marginTop="6dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgTemperatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+                <RadioButton android:id="@+id/rbCelsius" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Celsius" android:textColor="@color/white" android:layout_marginEnd="16dp" app:buttonTint="@android:color/white"/>
+                <RadioButton android:id="@+id/rbFahrenheit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fahrenheit" android:textColor="@color/white" android:layout_marginEnd="16dp" app:buttonTint="@android:color/white"/>
+                <RadioButton android:id="@+id/rbKelvin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kelvin" android:textColor="@color/white" app:buttonTint="@android:color/white"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lblResTemperatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temp: ---"
+                android:textColor="#2ECC71"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/lblSubtituloPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3.- Conversión de Peso (Base: Kilogramos)"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/txtPeso"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/white"
+                android:hint="Ejemplo conversión peso (Kilogramos)"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#7F8C8D"
+                android:layout_marginTop="6dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+                <RadioButton android:id="@+id/rbGramo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gramo" android:textColor="@color/white" android:layout_marginEnd="16dp" app:buttonTint="@android:color/white"/>
+                <RadioButton android:id="@+id/rbLibra" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Libra" android:textColor="@color/white" android:layout_marginEnd="16dp" app:buttonTint="@android:color/white"/>
+                <RadioButton android:id="@+id/rbKg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kilogramo" android:textColor="@color/white" app:buttonTint="@android:color/white"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lblResPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso: ---"
+                android:textColor="#2ECC71"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/btnCalcularConversor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Procesar Conversiones"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnVolverConversor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volver al Menú"
+                style="?attr/materialButtonOutlinedStyle"
+                android:textColor="@color/white"
+                app:strokeColor="@color/white"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

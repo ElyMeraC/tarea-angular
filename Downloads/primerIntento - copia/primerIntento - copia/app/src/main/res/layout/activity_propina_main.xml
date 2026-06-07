@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PropinaMainActivity"
+    android:background="#01022e"
+    android:layout_marginTop="35dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="320dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dlaccessletra" />
+
+    <TextView
+        android:id="@+id/lblTituloPropina"
+        android:layout_width="273dp"
+        android:layout_height="36dp"
+        android:text="Calculadora de Propinas"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/lblMontoFactura"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:text="Monto de la Factura ($):"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTituloPropina"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/txtMonto"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:hint="Ej: 25.50"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#7F8C8D"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMontoFactura"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/lblSeleccionePorcentaje"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:text="Porcentaje de Propina:"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMonto"
+        android:layout_marginTop="20dp" />
+
+    <RadioGroup
+        android:id="@+id/rgPorcentajes"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSeleccionePorcentaje"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbPropina10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginEnd="32dp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbPropina15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginEnd="32dp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbPropina20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:buttonTint="@android:color/white" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblResultadoPropina"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:text="Propina: $0.00\nTotal Neto: $0.00"
+        android:textColor="#2ECC71"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:lineSpacingMultiplier="1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgPorcentajes"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnCalcularPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular Propina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblResultadoPropina"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnVolverPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver al Menú"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="@color/white"
+        app:strokeColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcularPropina"
+        android:layout_marginTop="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

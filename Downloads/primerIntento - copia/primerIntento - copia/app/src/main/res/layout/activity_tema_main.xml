@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TemaMainActivity"
+    android:background="#01022e"
+    android:layout_marginTop="35dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="320dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dlaccessletra"
+
+        />
+
+    <TextView
+        android:id="@+id/lblTituloTema"
+        android:layout_width="273dp"
+        android:layout_height="36dp"
+        android:text="Selector de Tema"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/lblInstruccionTema"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccione la apariencia visual de la aplicación:"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTituloTema"
+        android:layout_marginTop="24dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTemas"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblInstruccionTema">
+
+        <RadioButton
+            android:id="@+id/rbTemaClaro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tema Claro"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:padding="12dp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbTemaOscuro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tema Oscuro"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:padding="12dp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbTemaSistema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Definido por el Sistema"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:padding="12dp"
+            app:buttonTint="@android:color/white" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAplicarTema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Aplicar Tema"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupTemas" />
+
+    <Button
+        android:id="@+id/btnVolverTema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Volver al Menú"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="@color/white"
+        app:strokeColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAplicarTema" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

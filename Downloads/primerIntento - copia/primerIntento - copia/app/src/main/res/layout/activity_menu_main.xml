@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#01022e"
+    android:layout_marginTop="35dp"
+    tools:context=".MenuMainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="331dp"
+                android:layout_height="153dp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/dlaccessletra"
+
+                />
+
+            <TextView
+                android:id="@+id/lblBienvenida"
+                android:layout_width="273dp"
+                android:layout_height="36dp"
+
+                android:text=""
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.166"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.336" />
+
+            <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="365dp"
+        android:layout_height="264dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578">
+
+        <RadioButton
+            android:id="@+id/rbencuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:buttonTint="@android:color/white"
+            android:text="Encuesta de Satisfacción"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbselectema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:buttonTint="@android:color/white"
+            android:text="Selector de Tema"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbquiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:buttonTint="@android:color/white"
+            android:text="Quiz Simple"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbcalculador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:buttonTint="@android:color/white"
+            android:text="Calculadora de Propinas"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbconversor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:buttonTint="@android:color/white"
+            android:text="Conversor de Unidades"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnIngresarMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Ingresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

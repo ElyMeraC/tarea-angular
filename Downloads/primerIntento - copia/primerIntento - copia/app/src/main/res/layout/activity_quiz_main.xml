@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizMainActivity"
+    android:background="#01022e"
+    android:layout_marginTop="35dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="320dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dlaccessletra"
+
+        />
+
+    <TextView
+        android:id="@+id/lblTituloTema"
+        android:layout_width="273dp"
+        android:layout_height="36dp"
+        android:text="Quiz de Conocimiento"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/lblPreguntaQuiz1"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="1.- ¿Cuál es el lenguaje recomendado por Google para Android?"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTituloTema" />
+
+    <RadioGroup
+        android:id="@+id/rgQuiz1"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPreguntaQuiz1">
+        <RadioButton android:id="@+id/rbQ1Java" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Java" android:textColor="@color/white" android:textSize="12sp" android:layout_marginEnd="16dp" app:buttonTint="@android:color/white"/>
+        <RadioButton android:id="@+id/rbQ1Kotlin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kotlin" android:textColor="@color/white" android:textSize="12sp" android:layout_marginEnd="16dp" app:buttonTint="@android:color/white"/>
+        <RadioButton android:id="@+id/rbQ1Python" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Python" android:textColor="@color/white" android:textSize="12sp" app:buttonTint="@android:color/white"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblPreguntaQuiz2"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="2.- ¿Qué componente se usa para diseñar las vistas visuales en XML?"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgQuiz1" />
+
+    <RadioGroup
+        android:id="@+id/rgQuiz2"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPreguntaQuiz2">
+
+        <RadioButton
+            android:id="@+id/rbQ2Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Layout"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbQ2Gradle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Gradle"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbQ2Manifest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manifest"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:buttonTint="@android:color/white" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/lblPreguntaQuiz3"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="3.- ¿Qué elemento se usa para abrir una nueva pantalla (Activity)?"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgQuiz2" />
+
+    <RadioGroup
+        android:id="@+id/rgQuiz3"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="138dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPreguntaQuiz3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rbQ3Intent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Intent"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbQ3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Button"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbQ3Toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toast"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:buttonTint="@android:color/white" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCalificarQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calificar Test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgQuiz3"
+        android:layout_marginTop="28dp" />
+
+    <Button
+        android:id="@+id/btnVolverQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver al Menú"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="@color/white"
+        app:strokeColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalificarQuiz"
+        android:layout_marginTop="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EncuestaMainActivity"
+    android:background="#01022e"
+    android:layout_marginTop="35dp"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="320dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dlaccessletra"
+
+        />
+
+    <TextView
+        android:id="@+id/lbltitulo"
+        android:layout_width="273dp"
+        android:layout_height="36dp"
+
+        android:text="Encuesta de Satisfaccion"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <TextView
+        android:id="@+id/lblpregunta1"
+        android:layout_width="365dp"
+        android:layout_height="34dp"
+
+        android:text="1.- ¿Cómo calificaría el trato y la amabilidad del técnico que lo atendió "
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.211" />
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="331dp"
+        android:layout_height="66dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblpregunta1">
+
+        <RadioButton
+            android:id="@+id/rbBuena"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Buena"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbMala"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textSize="12dp"
+            android:text="Mala"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbRegular"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Regular"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:buttonTint="@android:color/white" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblpregunta2"
+        android:layout_width="365dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="152dp"
+        android:text="2.- ¿Qué tan satisfecho está con el tiempo que tomó resolver su requerimiento o problema?"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup1"
+        app:layout_constraintVertical_bias="0.0" />
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="333dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblpregunta2">
+
+        <RadioButton
+            android:id="@+id/rb2Buena"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Buena"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rb2Mala"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textSize="12dp"
+            android:text="Mala"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rb2Regular"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textSize="12dp"
+            android:text="Regular"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblpregunta3"
+        android:layout_width="365dp"
+        android:layout_height="34dp"
+        android:text="3.- ¿Considera que el personal de soporte demostró el conocimiento necesario para atender su caso?"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="333dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblpregunta3">
+
+        <RadioButton
+            android:id="@+id/rb3Buena"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Buena"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rb3Mala"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Mala"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rb3Regular"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Regular"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblpregunta4"
+        android:layout_width="365dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="4dp"
+        android:text="4.- ¿La explicación sobre la causa del problema y la solución aplicada fue clara y fácil de entender?"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="333dp"
+        android:layout_height="64dp"
+
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblpregunta4">
+
+        <RadioButton
+            android:id="@+id/rb4Buena"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Buena"
+
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rb4Mala"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Mala"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rb4Regular"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Regular"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:buttonTint="@android:color/white" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblpregunta5"
+        android:layout_width="365dp"
+        android:layout_height="34dp"
+        android:text="5.- ¿Quedo satisfecho con la solucion de su problema?"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+    <RadioGroup
+        android:id="@+id/radioGroup5"
+        android:layout_width="333dp"
+        android:layout_height="64dp"
+
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblpregunta5">
+
+        <RadioButton
+            android:id="@+id/rb5Buena"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Buena"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rb5Mala"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Mala"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rb5Regular"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textSize="12dp"
+            android:text="Regular"
+            android:textColor="@color/white"
+            app:buttonTint="@android:color/white" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnEncuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Enviar Encuesta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup5" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
