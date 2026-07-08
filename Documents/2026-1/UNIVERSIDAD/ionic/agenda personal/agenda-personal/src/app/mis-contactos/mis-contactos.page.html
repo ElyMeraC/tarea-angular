@@ -73,6 +73,9 @@
             {{ contact.email }}
           </p>
         </ion-label>
+        <ion-button slot="end" fill="clear" color="primary" (click)="goToEdit(contact); $event.stopPropagation()">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+        </ion-button>
         <ion-button slot="end" fill="clear" color="danger" (click)="confirmDelete(contact); $event.stopPropagation()">
           <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
         </ion-button>
