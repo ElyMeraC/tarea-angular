@@ -48,6 +48,7 @@
   --ion-text-color-rgb: 30, 41, 59;
   --ion-card-background: #ffffff;
   --ion-item-background: #ffffff;
+  --ion-toolbar-background: #4f46e5;
 
   --app-bg: #f0f2ff;
   --app-card-bg: #ffffff;
@@ -65,11 +66,65 @@
 }
 
 /* =============================================
-   TEMA OSCURO — clase oficial Ionic 8
-   Ionic maneja sus propias variables con .ion-palette-dark
-   Aquí solo sobreescribimos nuestras variables --app-*
+   MODO OSCURO — preferencia del sistema
+   Se activa automáticamente si el SO está en dark
    ============================================= */
-.ion-palette-dark {
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    /* Variables de Ionic */
+    --ion-background-color: #121212;
+    --ion-background-color-rgb: 18, 18, 18;
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255, 255, 255;
+    --ion-card-background: #1e1e1e;
+    --ion-item-background: #1e1e1e;
+    --ion-toolbar-background: #1f1f1f;
+    --ion-tab-bar-background: #1f1f1f;
+    --ion-color-step-50:  #1e1e1e;
+    --ion-color-step-100: #2a2a2a;
+    --ion-color-step-150: #363636;
+    --ion-color-step-200: #414141;
+    --ion-color-step-250: #4d4d4d;
+
+    /* Variables personalizadas */
+    --app-bg: #121212;
+    --app-card-bg: #1e1e1e;
+    --app-text-primary: #ffffff;
+    --app-text-secondary: #aaaaaa;
+    --app-field-bg: #2a2a2a;
+    --app-field-bg-alt: #1e1e1e;
+    --app-item-bg: #1e1e1e;
+    --app-search-bg: #2a2a2a;
+    --app-skeleton-bg: #333333;
+    --app-shadow-sm: rgba(0, 0, 0, 0.40);
+    --app-shadow-md: rgba(0, 0, 0, 0.50);
+    --app-shadow-lg: rgba(0, 0, 0, 0.65);
+    --app-border: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* =============================================
+   MODO OSCURO — clase manual  body.dark
+   Se activa cuando el usuario pulsa el toggle
+   Soporta también .ios body.dark y .md body.dark
+   ============================================= */
+body.dark {
+  /* Variables de Ionic */
+  --ion-background-color: #121212;
+  --ion-background-color-rgb: 18, 18, 18;
+  --ion-text-color: #ffffff;
+  --ion-text-color-rgb: 255, 255, 255;
+  --ion-card-background: #1e1e1e;
+  --ion-item-background: #1e1e1e;
+  --ion-toolbar-background: #1f1f1f;
+  --ion-tab-bar-background: #1f1f1f;
+  --ion-color-step-50:  #1e1e1e;
+  --ion-color-step-100: #2a2a2a;
+  --ion-color-step-150: #363636;
+  --ion-color-step-200: #414141;
+  --ion-color-step-250: #4d4d4d;
+
+  /* Variables personalizadas */
   --app-bg: #121212;
   --app-card-bg: #1e1e1e;
   --app-text-primary: #ffffff;
@@ -83,4 +138,16 @@
   --app-shadow-md: rgba(0, 0, 0, 0.50);
   --app-shadow-lg: rgba(0, 0, 0, 0.65);
   --app-border: rgba(255, 255, 255, 0.08);
+}
+
+/* Compatibilidad con plataformas Ionic (iOS / MD) */
+.ios body.dark,
+.md body.dark {
+  --ion-background-color: #121212;
+  --ion-background-color-rgb: 18, 18, 18;
+  --ion-text-color: #ffffff;
+  --ion-text-color-rgb: 255, 255, 255;
+  --ion-card-background: #1e1e1e;
+  --ion-item-background: #1e1e1e;
+  --ion-toolbar-background: #1f1f1f;
 }

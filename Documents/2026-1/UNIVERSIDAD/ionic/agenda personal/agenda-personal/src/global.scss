@@ -39,13 +39,14 @@ ion-toast {
   --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Ionic maneja el dark mode completo via .ion-palette-dark (importado arriba).
-   Solo necesitamos asegurar que ion-content use nuestras variables --app-* */
-.ion-palette-dark ion-content {
+/* ion-content e ion-searchbar usan nuestras variables --app-* en ambos modos dark */
+.ion-palette-dark ion-content,
+body.dark ion-content {
   --background: var(--app-bg);
 }
 
-.ion-palette-dark ion-searchbar {
+.ion-palette-dark ion-searchbar,
+body.dark ion-searchbar {
   --background: var(--app-search-bg);
   --placeholder-color: var(--app-text-secondary);
   --icon-color: var(--app-text-secondary);

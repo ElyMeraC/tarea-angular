@@ -33,7 +33,7 @@ export class MisContactosPage implements OnInit {
     const saved = localStorage.getItem('theme');
     this.isDark = saved === 'dark' ||
       (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    document.body.classList.toggle('ion-palette-dark', this.isDark);
+    this.applyTheme();
 
     this.currentUser = this.auth.getCurrentUser();
     if (!this.currentUser) {
@@ -50,6 +50,9 @@ export class MisContactosPage implements OnInit {
   }
 
   private applyTheme() {
+    // body.dark  → activa variables.scss (patrón clásico Ionic)
+    // ion-palette-dark → activa dark.class.css de Ionic 8
+    document.body.classList.toggle('dark', this.isDark);
     document.body.classList.toggle('ion-palette-dark', this.isDark);
   }
 
