@@ -2,6 +2,9 @@
   <ion-toolbar color="primary">
     <ion-title>Mis contactos</ion-title>
     <ion-buttons slot="end">
+      <ion-button (click)="toggleTheme()">
+        <ion-icon slot="icon-only" [name]="isDark ? 'sunny-outline' : 'moon-outline'"></ion-icon>
+      </ion-button>
       <ion-button (click)="logout()">
         <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
       </ion-button>
@@ -70,7 +73,9 @@
             {{ contact.email }}
           </p>
         </ion-label>
-        <ion-icon slot="end" name="chevron-forward-outline" color="medium"></ion-icon>
+        <ion-button slot="end" fill="clear" color="danger" (click)="confirmDelete(contact); $event.stopPropagation()">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
       </ion-item>
       <ion-item-options side="end">
         <ion-item-option color="primary" (click)="goToEdit(contact)">
@@ -87,7 +92,7 @@
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button routerLink="/crear-contacto" color="primary">
-      <ion-icon name="add-outline"></ion-icon>
+      <ion-icon name="add" style="font-size: 32px; font-weight: 900;"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>

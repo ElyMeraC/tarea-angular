@@ -18,6 +18,7 @@ export class MisContactosPage implements OnInit {
   contacts: Contact[] = [];
   searchTerm = '';
   isLoading = false;
+  isDark = false;
   readonly skeletonItems = [1, 2, 3, 4];
 
   constructor(
@@ -29,12 +30,28 @@ export class MisContactosPage implements OnInit {
   ) {}
 
   ngOnInit() {
+    const saved = localStorage.getItem('theme');
+    this.isDark = saved === 'dark' ||
+      (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    this.applyTheme();
+
     this.currentUser = this.auth.getCurrentUser();
     if (!this.currentUser) {
       this.router.navigateByUrl('/home', { replaceUrl: true });
       return;
     }
     this.loadContacts();
+  }
+
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+    this.applyTheme();
+  }
+
+  private applyTheme() {
+    document.documentElement.classList.toggle('dark-theme', this.isDark);
+    document.documentElement.classList.toggle('light-theme', !this.isDark);
   }
 
   ionViewWillEnter() {

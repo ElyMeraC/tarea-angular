@@ -1,0 +1,129 @@
+/* =============================================
+   COLORES BASE (Ionic color palette)
+   ============================================= */
+:root {
+  --ion-color-primary: #4f46e5;
+  --ion-color-primary-rgb: 79, 70, 229;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #4539c9;
+  --ion-color-primary-tint: #6158e8;
+
+  --ion-color-secondary: #7c3aed;
+  --ion-color-secondary-rgb: 124, 58, 237;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #6d34d1;
+  --ion-color-secondary-tint: #894eef;
+
+  --ion-color-success: #10b981;
+  --ion-color-success-rgb: 16, 185, 129;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0ea371;
+  --ion-color-success-tint: #28c08e;
+
+  --ion-color-warning: #f59e0b;
+  --ion-color-warning-rgb: 245, 158, 11;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #d88b09;
+  --ion-color-warning-tint: #f6a823;
+
+  --ion-color-danger: #ef4444;
+  --ion-color-danger-rgb: 239, 68, 68;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d23c3c;
+  --ion-color-danger-tint: #f15757;
+
+  --ion-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* =============================================
+     TEMA CLARO (valores por defecto)
+     ============================================= */
+  --ion-background-color: #f0f2ff;
+  --ion-background-color-rgb: 240, 242, 255;
+  --ion-text-color: #1e293b;
+  --ion-text-color-rgb: 30, 41, 59;
+  --ion-card-background: #ffffff;
+  --ion-item-background: #ffffff;
+
+  --app-bg: #f0f2ff;
+  --app-card-bg: #ffffff;
+  --app-text-primary: #1e293b;
+  --app-text-secondary: #64748b;
+  --app-field-bg: #f4f5ff;
+  --app-field-bg-alt: #f8f8fb;
+  --app-item-bg: #ffffff;
+  --app-search-bg: #ffffff;
+  --app-skeleton-bg: #e0e3f0;
+  --app-shadow-sm: rgba(0, 0, 0, 0.06);
+  --app-shadow-md: rgba(0, 0, 0, 0.08);
+  --app-shadow-lg: rgba(0, 0, 0, 0.20);
+  --app-border: rgba(0, 0, 0, 0.06);
+}
+
+/* =============================================
+   TEMA OSCURO — preferencia del sistema
+   ============================================= */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-theme) {
+    --ion-background-color: #0f172a;
+    --ion-background-color-rgb: 15, 23, 42;
+    --ion-text-color: #f1f5f9;
+    --ion-text-color-rgb: 241, 245, 249;
+    --ion-card-background: #1e293b;
+    --ion-item-background: #1e293b;
+    --ion-color-step-50:  #1a2535;
+    --ion-color-step-100: #1e293b;
+    --ion-color-step-150: #253347;
+    --ion-color-step-200: #2d3d54;
+    --ion-color-step-250: #354861;
+
+    --app-bg: #0f172a;
+    --app-card-bg: #1e293b;
+    --app-text-primary: #f1f5f9;
+    --app-text-secondary: #94a3b8;
+    --app-field-bg: #253347;
+    --app-field-bg-alt: #1a2535;
+    --app-item-bg: #1e293b;
+    --app-search-bg: #1e293b;
+    --app-skeleton-bg: #2d3d54;
+    --app-shadow-sm: rgba(0, 0, 0, 0.35);
+    --app-shadow-md: rgba(0, 0, 0, 0.45);
+    --app-shadow-lg: rgba(0, 0, 0, 0.60);
+    --app-border: rgba(255, 255, 255, 0.06);
+  }
+}
+
+/* =============================================
+   TEMA OSCURO — clase manual
+   ============================================= */
+.dark-theme {
+  --ion-background-color: #0f172a;
+  --ion-background-color-rgb: 15, 23, 42;
+  --ion-text-color: #f1f5f9;
+  --ion-text-color-rgb: 241, 245, 249;
+  --ion-card-background: #1e293b;
+  --ion-item-background: #1e293b;
+  --ion-color-step-50:  #1a2535;
+  --ion-color-step-100: #1e293b;
+  --ion-color-step-150: #253347;
+  --ion-color-step-200: #2d3d54;
+  --ion-color-step-250: #354861;
+
+  --app-bg: #0f172a;
+  --app-card-bg: #1e293b;
+  --app-text-primary: #f1f5f9;
+  --app-text-secondary: #94a3b8;
+  --app-field-bg: #253347;
+  --app-field-bg-alt: #1a2535;
+  --app-item-bg: #1e293b;
+  --app-search-bg: #1e293b;
+  --app-skeleton-bg: #2d3d54;
+  --app-shadow-sm: rgba(0, 0, 0, 0.35);
+  --app-shadow-md: rgba(0, 0, 0, 0.45);
+  --app-shadow-lg: rgba(0, 0, 0, 0.60);
+  --app-border: rgba(255, 255, 255, 0.06);
+}

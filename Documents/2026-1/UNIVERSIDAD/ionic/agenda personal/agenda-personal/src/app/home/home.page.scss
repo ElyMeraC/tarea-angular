@@ -1,0 +1,106 @@
+.login-content {
+  --background: linear-gradient(155deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 24px 28px;
+  color: #fff;
+  text-align: center;
+
+  .brand-icon-wrap {
+    width: 84px;
+    height: 84px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    backdrop-filter: blur(4px);
+
+    ion-icon {
+      font-size: 46px;
+      color: #fff;
+    }
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.3px;
+  }
+
+  p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin: 0;
+  }
+}
+
+.auth-card {
+  margin: 0 16px 8px;
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  background: var(--app-card-bg);
+
+  ion-card-content {
+    padding: 24px 20px 20px;
+  }
+}
+
+.form-field {
+  background: var(--app-field-bg);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  ion-item {
+    --background: transparent;
+    --padding-start: 4px;
+    --color: var(--app-text-primary);
+  }
+}
+
+.remember-item {
+  --background: transparent;
+  --padding-start: 4px;
+  --color: var(--app-text-primary);
+  margin: 4px 0 8px;
+}
+
+.submit-btn {
+  --border-radius: 12px;
+  margin-top: 4px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.field-error {
+  color: var(--ion-color-danger);
+  font-size: 12px;
+  margin: -4px 0 8px 14px;
+}
+
+.auth-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 16px 32px;
+
+  .link-btn {
+    --color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .link-btn-secondary {
+    --color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+  }
+}
