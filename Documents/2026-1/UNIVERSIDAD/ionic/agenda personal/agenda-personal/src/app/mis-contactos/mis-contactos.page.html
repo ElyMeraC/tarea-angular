@@ -2,11 +2,13 @@
   <ion-toolbar color="primary">
     <ion-title>Mis contactos</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="toggleTheme()">
-        <ion-icon slot="icon-only" [name]="isDark ? 'sunny-outline' : 'moon-outline'"></ion-icon>
+      <ion-button (click)="toggleTheme()" style="font-size:13px; font-weight:600;">
+        <ion-icon slot="start" [name]="isDark ? 'sunny-outline' : 'moon-outline'"></ion-icon>
+        {{ isDark ? 'Sol' : 'Luna' }}
       </ion-button>
-      <ion-button (click)="logout()">
-        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      <ion-button (click)="logout()" style="font-size:13px; font-weight:600;">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        Salir
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
