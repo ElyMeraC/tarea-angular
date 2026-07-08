@@ -9,6 +9,9 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+/* Dark mode oficial de Ionic 8 — activa con clase .ion-palette-dark en body */
+@import "@ionic/angular/css/palettes/dark.class.css";
+
 /* === Alerta botón destructivo === */
 .alert-btn-danger {
   color: var(--ion-color-danger) !important;
@@ -36,69 +39,14 @@ ion-toast {
   --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* =============================================
-   DARK MODE — overrides globales de Ionic
-   ============================================= */
-@media (prefers-color-scheme: dark) {
-  :root:not(.light-theme) {
-    ion-content {
-      --background: var(--app-bg);
-    }
-    ion-card {
-      background: var(--app-card-bg);
-      color: var(--app-text-primary);
-    }
-    ion-item {
-      --background: var(--app-item-bg);
-      --color: var(--app-text-primary);
-    }
-    ion-label {
-      color: var(--app-text-primary) !important;
-    }
-    ion-searchbar {
-      --background: var(--app-search-bg);
-      --color: var(--app-text-primary);
-      --placeholder-color: var(--app-text-secondary);
-      --icon-color: var(--app-text-secondary);
-    }
-    ion-input {
-      --color: var(--app-text-primary);
-      --placeholder-color: var(--app-text-secondary);
-    }
-    ion-alert {
-      --background: #1e293b;
-      --ion-text-color: #f1f5f9;
-    }
-  }
+/* Ionic maneja el dark mode completo via .ion-palette-dark (importado arriba).
+   Solo necesitamos asegurar que ion-content use nuestras variables --app-* */
+.ion-palette-dark ion-content {
+  --background: var(--app-bg);
 }
 
-.dark-theme {
-  ion-content {
-    --background: var(--app-bg);
-  }
-  ion-card {
-    background: var(--app-card-bg);
-    color: var(--app-text-primary);
-  }
-  ion-item {
-    --background: var(--app-item-bg);
-    --color: var(--app-text-primary);
-  }
-  ion-label {
-    color: var(--app-text-primary) !important;
-  }
-  ion-searchbar {
-    --background: var(--app-search-bg);
-    --color: var(--app-text-primary);
-    --placeholder-color: var(--app-text-secondary);
-    --icon-color: var(--app-text-secondary);
-  }
-  ion-input {
-    --color: var(--app-text-primary);
-    --placeholder-color: var(--app-text-secondary);
-  }
-  ion-alert {
-    --background: #1e293b;
-    --ion-text-color: #f1f5f9;
-  }
+.ion-palette-dark ion-searchbar {
+  --background: var(--app-search-bg);
+  --placeholder-color: var(--app-text-secondary);
+  --icon-color: var(--app-text-secondary);
 }

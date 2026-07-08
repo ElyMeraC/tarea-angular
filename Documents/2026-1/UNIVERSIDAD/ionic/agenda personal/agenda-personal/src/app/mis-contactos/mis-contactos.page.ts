@@ -33,7 +33,7 @@ export class MisContactosPage implements OnInit {
     const saved = localStorage.getItem('theme');
     this.isDark = saved === 'dark' ||
       (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    this.applyTheme();
+    document.body.classList.toggle('ion-palette-dark', this.isDark);
 
     this.currentUser = this.auth.getCurrentUser();
     if (!this.currentUser) {
@@ -50,8 +50,7 @@ export class MisContactosPage implements OnInit {
   }
 
   private applyTheme() {
-    document.documentElement.classList.toggle('dark-theme', this.isDark);
-    document.documentElement.classList.toggle('light-theme', !this.isDark);
+    document.body.classList.toggle('ion-palette-dark', this.isDark);
   }
 
   ionViewWillEnter() {

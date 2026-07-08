@@ -65,65 +65,22 @@
 }
 
 /* =============================================
-   TEMA OSCURO — preferencia del sistema
+   TEMA OSCURO — clase oficial Ionic 8
+   Ionic maneja sus propias variables con .ion-palette-dark
+   Aquí solo sobreescribimos nuestras variables --app-*
    ============================================= */
-@media (prefers-color-scheme: dark) {
-  :root:not(.light-theme) {
-    --ion-background-color: #0f172a;
-    --ion-background-color-rgb: 15, 23, 42;
-    --ion-text-color: #f1f5f9;
-    --ion-text-color-rgb: 241, 245, 249;
-    --ion-card-background: #1e293b;
-    --ion-item-background: #1e293b;
-    --ion-color-step-50:  #1a2535;
-    --ion-color-step-100: #1e293b;
-    --ion-color-step-150: #253347;
-    --ion-color-step-200: #2d3d54;
-    --ion-color-step-250: #354861;
-
-    --app-bg: #0f172a;
-    --app-card-bg: #1e293b;
-    --app-text-primary: #f1f5f9;
-    --app-text-secondary: #94a3b8;
-    --app-field-bg: #253347;
-    --app-field-bg-alt: #1a2535;
-    --app-item-bg: #1e293b;
-    --app-search-bg: #1e293b;
-    --app-skeleton-bg: #2d3d54;
-    --app-shadow-sm: rgba(0, 0, 0, 0.35);
-    --app-shadow-md: rgba(0, 0, 0, 0.45);
-    --app-shadow-lg: rgba(0, 0, 0, 0.60);
-    --app-border: rgba(255, 255, 255, 0.06);
-  }
-}
-
-/* =============================================
-   TEMA OSCURO — clase manual
-   ============================================= */
-.dark-theme {
-  --ion-background-color: #0f172a;
-  --ion-background-color-rgb: 15, 23, 42;
-  --ion-text-color: #f1f5f9;
-  --ion-text-color-rgb: 241, 245, 249;
-  --ion-card-background: #1e293b;
-  --ion-item-background: #1e293b;
-  --ion-color-step-50:  #1a2535;
-  --ion-color-step-100: #1e293b;
-  --ion-color-step-150: #253347;
-  --ion-color-step-200: #2d3d54;
-  --ion-color-step-250: #354861;
-
-  --app-bg: #0f172a;
-  --app-card-bg: #1e293b;
-  --app-text-primary: #f1f5f9;
-  --app-text-secondary: #94a3b8;
-  --app-field-bg: #253347;
-  --app-field-bg-alt: #1a2535;
-  --app-item-bg: #1e293b;
-  --app-search-bg: #1e293b;
-  --app-skeleton-bg: #2d3d54;
-  --app-shadow-sm: rgba(0, 0, 0, 0.35);
-  --app-shadow-md: rgba(0, 0, 0, 0.45);
-  --app-shadow-lg: rgba(0, 0, 0, 0.60);
-  --app-border: rgba(255, 255, 255, 0.06);
+.ion-palette-dark {
+  --app-bg: #121212;
+  --app-card-bg: #1e1e1e;
+  --app-text-primary: #ffffff;
+  --app-text-secondary: #aaaaaa;
+  --app-field-bg: #2a2a2a;
+  --app-field-bg-alt: #1e1e1e;
+  --app-item-bg: #1e1e1e;
+  --app-search-bg: #2a2a2a;
+  --app-skeleton-bg: #333333;
+  --app-shadow-sm: rgba(0, 0, 0, 0.40);
+  --app-shadow-md: rgba(0, 0, 0, 0.50);
+  --app-shadow-lg: rgba(0, 0, 0, 0.65);
+  --app-border: rgba(255, 255, 255, 0.08);
 }
