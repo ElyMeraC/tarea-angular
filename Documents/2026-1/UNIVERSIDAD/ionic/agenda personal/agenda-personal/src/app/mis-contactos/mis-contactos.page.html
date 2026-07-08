@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Mis contactos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contacts-content">
+  <ion-searchbar
+    placeholder="Buscar por nombre, teléfono o correo..."
+    (ionInput)="onSearch($event)"
+    debounce="200"
+    animated
+    class="contacts-search">
+  </ion-searchbar>
+
+  <!-- Skeleton de carga -->
+  <ion-list class="contact-list" *ngIf="isLoading" lines="none">
+    <ion-item class="contact-item" *ngFor="let i of skeletonItems">
+      <div class="skeleton-avatar" slot="start"></div>
+      <ion-label>
+        <ion-skeleton-text animated style="width: 55%; height: 15px; margin-bottom: 6px; border-radius: 6px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 75%; height: 12px; margin-bottom: 4px; border-radius: 6px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 65%; height: 12px; border-radius: 6px;"></ion-skeleton-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Estado vacío: sin contactos -->
+  <div class="empty-state" *ngIf="!isLoading && contacts.length === 0">
+    <ion-icon name="people-outline"></ion-icon>
+    <h3>Sin contactos</h3>
+    <p>Aún no tienes contactos. ¡Crea el primero!</p>
+    <ion-button fill="solid" routerLink="/crear-contacto">
+      <ion-icon name="person-add-outline" slot="start"></ion-icon>
+      Crear contacto
+    </ion-button>
+  </div>
+
+  <!-- Estado vacío: sin resultados de búsqueda -->
+  <div class="empty-state" *ngIf="!isLoading && filteredContacts.length === 0 && contacts.length > 0">
+    <ion-icon name="search-outline"></ion-icon>
+    <h3>Sin resultados</h3>
+    <p>No se encontraron contactos con "{{ searchTerm }}"</p>
+  </div>
+
+  <!-- Contador y lista -->
+  <div class="contact-count" *ngIf="!isLoading && contacts.length > 0">
+    {{ filteredContacts.length }} de {{ contacts.length }} contacto{{ contacts.length !== 1 ? 's' : '' }}
+  </div>
+
+  <ion-list class="contact-list" *ngIf="!isLoading && filteredContacts.length > 0" lines="none">
+    <ion-item-sliding *ngFor="let contact of filteredContacts">
+      <ion-item class="contact-item" button detail="false" (click)="goToEdit(contact)">
+        <div class="contact-avatar" slot="start">
+          {{ contact.nombre.charAt(0).toUpperCase() }}
+        </div>
+        <ion-label>
+          <h2 class="contact-name">{{ contact.nombre }}</h2>
+          <p class="contact-info">
+            <ion-icon name="call-outline"></ion-icon>
+            {{ contact.telefono }}
+          </p>
+          <p class="contact-info">
+            <ion-icon name="mail-outline"></ion-icon>
+            {{ contact.email }}
+          </p>
+        </ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline" color="medium"></ion-icon>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="primary" (click)="goToEdit(contact)">
+          <ion-icon slot="top" name="create-outline"></ion-icon>
+          Editar
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="confirmDelete(contact)">
+          <ion-icon slot="top" name="trash-outline"></ion-icon>
+          Eliminar
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button routerLink="/crear-contacto" color="primary">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
