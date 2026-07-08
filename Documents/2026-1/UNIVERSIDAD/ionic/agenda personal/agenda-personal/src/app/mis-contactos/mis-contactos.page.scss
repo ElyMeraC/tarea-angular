@@ -116,6 +116,47 @@
   }
 }
 
+/* Botones de acción editar / eliminar */
+.action-btns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 4px;
+
+  button {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.1s ease;
+
+    ion-icon {
+      font-size: 17px;
+      color: #ffffff;
+      pointer-events: none;
+    }
+
+    &:active {
+      opacity: 0.75;
+      transform: scale(0.92);
+    }
+  }
+
+  .btn-edit {
+    background: #4f46e5;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
+  }
+
+  .btn-delete {
+    background: #ef4444;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  }
+}
+
 /* FAB button "+" bien visible */
 ion-fab-button {
   --box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
