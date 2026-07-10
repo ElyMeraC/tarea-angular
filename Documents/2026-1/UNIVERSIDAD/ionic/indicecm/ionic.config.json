@@ -1,0 +1,7 @@
+{
+  "name": "indicecm_temp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

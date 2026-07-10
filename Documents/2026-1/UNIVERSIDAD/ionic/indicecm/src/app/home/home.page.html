@@ -1,0 +1,179 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Calculadora de IMC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calculadora de IMC</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="imc-container">
+
+    <ion-card class="form-card">
+      <ion-card-header>
+        <ion-card-title>Ingresa tus datos</ion-card-title>
+        <ion-card-subtitle>Índice de Masa Corporal</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list lines="none">
+
+          <ion-item class="input-item">
+            <ion-label position="stacked">Peso (kg)</ion-label>
+            <ion-input
+              type="number"
+              [(ngModel)]="peso"
+              placeholder="Ej: 70"
+              min="1"
+              max="300">
+            </ion-input>
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-label position="stacked">Altura (metros)</ion-label>
+            <ion-input
+              type="number"
+              [(ngModel)]="altura"
+              placeholder="Ej: 1.75"
+              min="0.5"
+              max="3"
+              step="0.01">
+            </ion-input>
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-label position="stacked">Edad (años)</ion-label>
+            <ion-input
+              type="number"
+              [(ngModel)]="edad"
+              placeholder="Ej: 25"
+              min="1"
+              max="120">
+            </ion-input>
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-label position="stacked">Género</ion-label>
+            <ion-select
+              [(ngModel)]="genero"
+              placeholder="Selecciona tu género"
+              interface="popover">
+              <ion-select-option value="masculino">Masculino</ion-select-option>
+              <ion-select-option value="femenino">Femenino</ion-select-option>
+              <ion-select-option value="otro">Otro</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+        </ion-list>
+
+        <ion-text color="danger" *ngIf="mostrarError" class="error-msg">
+          <p>Por favor completa todos los campos correctamente.</p>
+        </ion-text>
+
+        <div class="button-group">
+          <ion-button expand="block" color="primary" (click)="calcular()">
+            <ion-icon name="calculator-outline" slot="start"></ion-icon>
+            Calcular IMC
+          </ion-button>
+          <ion-button expand="block" fill="outline" color="medium" (click)="limpiar()">
+            <ion-icon name="refresh-outline" slot="start"></ion-icon>
+            Limpiar
+          </ion-button>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Resultado -->
+    <ion-card *ngIf="resultado" [ngClass]="resultado.color" class="resultado-card">
+      <ion-card-header>
+        <div class="resultado-header">
+          <ion-icon name="body-outline" class="result-icon"></ion-icon>
+          <ion-card-title class="result-title">Resultado</ion-card-title>
+        </div>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="imc-valor">
+          <span class="imc-numero">{{ resultado.valor | number:'1.2-2' }}</span>
+          <span class="imc-label">IMC</span>
+        </div>
+
+        <div class="categoria-badge">
+          <ion-badge [color]="resultado.color === 'bajo-peso' ? 'primary' :
+                             resultado.color === 'normal' ? 'success' :
+                             resultado.color === 'sobrepeso' ? 'warning' : 'danger'">
+            {{ resultado.categoria }}
+          </ion-badge>
+        </div>
+
+        <p class="descripcion">{{ resultado.descripcion }}</p>
+
+        <div class="datos-resumen">
+          <div class="dato-item">
+            <span class="dato-label">Peso</span>
+            <span class="dato-valor">{{ peso }} kg</span>
+          </div>
+          <div class="dato-item">
+            <span class="dato-label">Altura</span>
+            <span class="dato-valor">{{ altura }} m</span>
+          </div>
+          <div class="dato-item">
+            <span class="dato-label">Edad</span>
+            <span class="dato-valor">{{ edad }} años</span>
+          </div>
+          <div class="dato-item">
+            <span class="dato-label">Género</span>
+            <span class="dato-valor">{{ genero | titlecase }}</span>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Tabla de referencia -->
+    <ion-card class="referencia-card">
+      <ion-card-header>
+        <ion-card-title>Tabla de referencia</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list lines="inset">
+          <ion-item class="ref-bajo-peso">
+            <ion-icon name="arrow-down-outline" slot="start" color="primary"></ion-icon>
+            <ion-label>
+              <h3>Bajo Peso</h3>
+              <p>IMC menor a 18.5</p>
+            </ion-label>
+          </ion-item>
+          <ion-item class="ref-normal">
+            <ion-icon name="checkmark-circle-outline" slot="start" color="success"></ion-icon>
+            <ion-label>
+              <h3>Peso Normal</h3>
+              <p>IMC 18.5 – 24.9</p>
+            </ion-label>
+          </ion-item>
+          <ion-item class="ref-sobrepeso">
+            <ion-icon name="warning-outline" slot="start" color="warning"></ion-icon>
+            <ion-label>
+              <h3>Sobrepeso</h3>
+              <p>IMC 25 – 29.9</p>
+            </ion-label>
+          </ion-item>
+          <ion-item class="ref-obesidad">
+            <ion-icon name="alert-circle-outline" slot="start" color="danger"></ion-icon>
+            <ion-label>
+              <h3>Obesidad</h3>
+              <p>IMC 30 o mayor</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,189 @@
+.imc-container {
+  padding: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  ion-card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+}
+
+.input-item {
+  --border-radius: 10px;
+  --background: var(--ion-color-light);
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+  ion-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  ion-input, ion-select {
+    margin-top: 4px;
+  }
+}
+
+.error-msg {
+  display: block;
+  margin: 8px 0;
+
+  p {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* ── Tarjeta de resultado ── */
+.resultado-card {
+  border-radius: 16px;
+  border-left: 6px solid;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+  .resultado-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .result-icon {
+    font-size: 1.8rem;
+  }
+
+  .result-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .imc-valor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 0;
+  }
+
+  .imc-numero {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .imc-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+
+  .categoria-badge {
+    text-align: center;
+    margin: 8px 0 12px;
+
+    ion-badge {
+      font-size: 1rem;
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+  }
+
+  .descripcion {
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 16px;
+  }
+
+  .datos-resumen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .dato-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    padding: 8px;
+  }
+
+  .dato-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+  }
+
+  .dato-valor {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+}
+
+/* ── Colores de categoría ── */
+.bajo-peso {
+  background: #dbeafe !important;
+  border-left-color: #3b82f6;
+  color: #1e3a5f;
+
+  .imc-numero, .dato-valor { color: #1d4ed8; }
+}
+
+.normal {
+  background: #dcfce7 !important;
+  border-left-color: #22c55e;
+  color: #14532d;
+
+  .imc-numero, .dato-valor { color: #15803d; }
+}
+
+.sobrepeso {
+  background: #fef9c3 !important;
+  border-left-color: #eab308;
+  color: #713f12;
+
+  .imc-numero, .dato-valor { color: #a16207; }
+}
+
+.obesidad {
+  background: #fee2e2 !important;
+  border-left-color: #ef4444;
+  color: #7f1d1d;
+
+  .imc-numero, .dato-valor { color: #dc2626; }
+}
+
+/* ── Tabla de referencia ── */
+.referencia-card {
+  border-radius: 16px;
+
+  ion-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .ref-bajo-peso h3   { color: #1d4ed8; }
+  .ref-normal h3      { color: #15803d; }
+  .ref-sobrepeso h3   { color: #a16207; }
+  .ref-obesidad h3    { color: #dc2626; }
+}
